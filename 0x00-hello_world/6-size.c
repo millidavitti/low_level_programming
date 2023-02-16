@@ -8,7 +8,7 @@
 
 int main(void)
 {
-char varChar[];
+char varChar;
 int varInt;
 long int varLong;
 long long int varLLong;
