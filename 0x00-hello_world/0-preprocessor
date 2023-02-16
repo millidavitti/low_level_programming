@@ -1,2 +1,2 @@
 #!/bin/bash
-CFILE='main.c'|cpp -P $CFILE > c
+cpp -P $CFILE > main.c
