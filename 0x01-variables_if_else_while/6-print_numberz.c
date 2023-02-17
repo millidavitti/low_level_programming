@@ -12,7 +12,7 @@ int num = 48;
 
 while (num < 58)
 {
-putchar(48);
+putchar(num);
 num++;
 }
 putchar('\n');
