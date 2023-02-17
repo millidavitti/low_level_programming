@@ -13,11 +13,14 @@ int num = 48;
 while (num < 58)
 {
 putchar(num);
-putchar(44);
+if (num == 57)
+{
 num++;
-if (num == 56)
 continue;
+}
+putchar(44);
 putchar(32);
+num++;
 }
 putchar('\n');
 return (0);
