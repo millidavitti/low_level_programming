@@ -15,6 +15,6 @@ while (ascii < 123)
 putchar (ascii);
 ascii++;
 }
-putchar (\n);
+putchar ("\n");
 return (0);
 }
