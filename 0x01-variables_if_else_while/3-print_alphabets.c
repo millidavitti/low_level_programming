@@ -9,17 +9,17 @@
 int main(void)
 {
 int lower, upper;
-lower = 65;
-upper = 97;
+upper = 65;
+lower = 97;
 
-while (upper < 123)
+while (upper < 91)
 {
-if (lower < 91)
+if (lower < 123)
 {
 putchar(lower);
 lower++;
 }
-else if (upper < 123)
+else if (upper < 91)
 {
 putchar(upper);
 upper++;
@@ -27,5 +27,5 @@ upper++;
 }
 putchar('\n');
 
- return (0);
+return (0);
 }
