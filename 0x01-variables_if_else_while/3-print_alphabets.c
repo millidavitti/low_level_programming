@@ -26,4 +26,6 @@ upper++;
 }
 }
 putchar('\n');
+
+ return (0);
 }
