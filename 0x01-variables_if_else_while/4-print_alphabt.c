@@ -13,7 +13,9 @@ int lower = 97;
 while (lower <= 122)
 {
 if (lower == 101 || lower == 113)
+{
 continue;
+}
 putchar(lower);
 lower++;
 }
