@@ -14,8 +14,10 @@ while (num < 58)
 {
 putchar(num);
 putchar(44);
+num++
+if (num == 56)
+continue;
 putchar(32);
-num++;
 }
 putchar('\n');
 return (0);
