@@ -14,8 +14,8 @@ void print_to_98(int n)
 int i;
 for (i = n; i < 99; i++)
 {
-int t, u;
- h = (i - (i % 100)) / 100;
+int t, u, h;
+h = (i - (i % 100)) / 100;
 t = abs((i - (i % 10)) / 10);
 u = abs(i % 10);
 if (abs(h) > 0)
