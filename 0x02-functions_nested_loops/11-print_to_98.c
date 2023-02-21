@@ -19,6 +19,8 @@ u = i % 10;
 if (t > 0)
 _putchar(t + '0');
 _putchar(u + '0');
+if (i == 98)
+continue;
 _putchar(44);
 _putchar(32);
 }
