@@ -10,6 +10,8 @@ followed by a new line.
 void print_alphabet(void)
 {
 for (int ascii = 97; ascii < 123; ascii++)
+{
 _putchar(ascii);
+}
 _putchar('\n');
 }

@@ -16,7 +16,9 @@ void print_alphabet(void);
 void print_alphabet(void)
 {
 for (int ascii = 97; ascii < 123; ascii++)
+{
 _putchar(ascii);
+}
 _putchar('\n');
 }
 # 3 "1-alphabet.c" 2
