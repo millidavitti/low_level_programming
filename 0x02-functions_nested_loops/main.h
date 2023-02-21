@@ -1,3 +1,4 @@
 #pragma once
 
-int main(void);
+#include "_putchar.c
+
