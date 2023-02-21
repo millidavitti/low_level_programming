@@ -19,7 +19,8 @@ t = (m - (m % 10)) / 10;
 u = m % 10;
 if (t > 0)
 _putchar(t + '0');
-
+else
+_putchar(32);
 _putchar(u + '0');
 if (j == 9)
 continue;
