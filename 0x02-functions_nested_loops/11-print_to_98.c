@@ -16,8 +16,10 @@ for (i = n; i < 99; i++)
 int t, u;
 t = (i - (i % 10)) / 10;
 u = i % 10;
+if (t > 0)
+_putchar(t + '0');
 _putchar(u + '0');
 _putchar(44);
-_putchar(32)
+_putchar(32);
 }
 }
