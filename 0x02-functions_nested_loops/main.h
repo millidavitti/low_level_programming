@@ -1,5 +1,5 @@
 #pragma once
 
-#include "_putchar"
+#include "_putchar.c"
 
 int main(void);
