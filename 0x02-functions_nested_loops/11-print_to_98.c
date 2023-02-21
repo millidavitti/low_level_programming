@@ -5,10 +5,10 @@
 followed by a new line
 *@n: int
 *
-*Return: int
+*Return: void
 */
 
-int print_to_98(int n)
+void print_to_98(int n)
 {
 int i;
 for (i = n; i < 99; i++)
