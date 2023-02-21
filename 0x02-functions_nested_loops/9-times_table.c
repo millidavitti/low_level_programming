@@ -21,6 +21,8 @@ if (t > 0)
 _putchar(t + '0');
 
 _putchar(u + '0');
+if (j == 9)
+continue;
 _putchar(44);
 _putchar(32);
 }
