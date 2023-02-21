@@ -9,7 +9,9 @@ in lowercase, followed by a new line.
 
 void print_alphabet_x10(void)
 {
-int i;
+int i,ascii;
 for (i = 0; i < 10; i++)
-print_alphabet();
+for(ascii = 97; ascii < 123; ascii++)
+_putchar(ascii);
+_putchar('\n');
 }
