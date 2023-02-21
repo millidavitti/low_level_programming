@@ -12,20 +12,27 @@ followed by a new line
 void print_to_98(int n)
 {
 int i;
-for (i = n; i < 99; i++)
+for (i = n; n < 99 ? i < 99 : i > 97; n < 99 ? i++ : i--)
 {
 int t, u, h;
 h = (i - (i % 100)) / 100;
-t = abs((i - (i % 10)) / 10);
+t = ((i - (i % 10)) / 10) % 10;
 u = abs(i % 10);
+
 if (abs(h) > 0)
 {
 if (h < 0)
 _putchar(45);
 _putchar(abs(h) + '0');
+_putchar(abs(t) + '0');
 }
-else if (t > 0)
+else if (abs(t) > 0)
+{
+if (t < 0)
+_putchar(45);
+_putchar(abs(t) + '0');
 _putchar(t + '0');
+}
 _putchar(u + '0');
 if (i == 98)
 continue;
