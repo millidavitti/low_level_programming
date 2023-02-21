@@ -13,7 +13,16 @@ for (i = 0; i < 12; i++)
 {
 for (j = 0; j < 10; j++)
 {
-_putchar((i * j) + '0');
+int m, t, u;
+m = i * j;
+t = (m - (m % 10)) / 10;
+u = m % 10;
+if (t > 0)
+_putchar(t + '0');
+
+_putchar(u + '0');
+_putchar(44);
+_putchar(32);
 }
 _putchar('\n');
 }
