@@ -24,4 +24,5 @@ continue;
 _putchar(44);
 _putchar(32);
 }
+_putchar('\n');
 }
