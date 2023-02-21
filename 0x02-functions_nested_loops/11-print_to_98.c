@@ -12,7 +12,7 @@ followed by a new line
 void print_to_98(int n)
 {
 int i;
-for (i = n; n < 99 ? i < 99 : i > 97; n < 99 ? i++ : i--)
+for (i = n; n < 99; i++)
 {
 int t, u, h;
 h = (i - (i % 100)) / 100;
