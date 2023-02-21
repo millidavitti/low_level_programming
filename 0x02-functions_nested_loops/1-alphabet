@@ -1,0 +1,28 @@
+# 1 "1-alphabet.c"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 31 "<command-line>"
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+# 32 "<command-line>" 2
+# 1 "1-alphabet.c"
+# 1 "main.h" 1
+       
+
+int _putchar(char c);
+void print_alphabet(void);
+# 2 "1-alphabet.c" 2
+# 1 "print_alphabet.c" 1
+# 10 "print_alphabet.c"
+void print_alphabet(void)
+{
+for (int ascii = 97; ascii < 123; ascii++)
+_putchar(ascii);
+_putchar('\n');
+}
+# 3 "1-alphabet.c" 2
+# 11 "1-alphabet.c"
+int main(void)
+{
+print_alphabet();
+return (0);
+}
