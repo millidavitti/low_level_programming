@@ -26,36 +26,36 @@ u = m % 10;
 
 if (h > 0)
 {
-putchar(h + '0');
-putchar(t + '0');
-putchar(u + '0');
+_putchar(h + '0');
+_putchar(t + '0');
+_putchar(u + '0');
 if (y == n)
 continue;
-putchar(44);
-putchar(46);
+_putchar(44);
+_putchar(46);
   
 }
 else if (t > 0)
 {
-putchar(t + '0');
-putchar(u + '0');
+_putchar(t + '0');
+_putchar(u + '0');
 if (y == n)
 continue;
-putchar(44);
-putchar(46);
-putchar(46);
+_putchar(44);
+_putchar(46);
+_putchar(46);
 }
 else
 {
-putchar(u + '0');
+_putchar(u + '0');
 if (y == n)
 continue;
-putchar(44);
-putchar(46);
-putchar(46);
-putchar(46);
+_putchar(44);
+_putchar(46);
+_putchar(46);
+_putchar(46);
 }
 }
-putchar('\n');
+_putchar('\n');
 }
 }
