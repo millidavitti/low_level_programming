@@ -6,53 +6,40 @@
  *
  *Return: int
  */
+
+
 void print_times_table(int n)
 {
-int x, y;
-if (n < 0 || n > 15)
-return;
+int num, mult, prod;
 
-for (x = 0; x <= n; x++)
+if (n >= 0 && n <= 15)
 {
-for (y = 0; y <= n; y++)
+for (num = 0; num <= n; num++)
 {
-int h, t, u, m;
-m = x * y;
-h  = (m - (m % 100)) / 100;
-t = ((m - (m % 10)) / 10) % 10;
-u = m % 10;
+_putchar('0');
+for (mult = 1; mult <= n; mult++)
+{
+_putchar(',');
+_putchar(' ');
 
-if (h > 0)
+prod = num * mult;
+
+if (prod <= 99)
+_putchar(' ');
+if (prod <= 9)
+_putchar(' ');
+if (prod >= 100)
 {
-_putchar(h + '0');
-_putchar(t + '0');
-_putchar(u + '0');
-if (y == n)
-continue;
-_putchar(44);
-_putchar(32);
+_putchar((prod / 100) + '0');
+_putchar(((prod / 10)) % 10 + '0');
 }
-else if (t > 0)
+else if (prod <= 99 && prod >= 10)
 {
-_putchar(t + '0');
-_putchar(u + '0');
-if (y == n)
-continue;
-_putchar(44);
-_putchar(32);
-_putchar(32);
+_putchar((prod / 10) + '0');
 }
-else
-{
-_putchar(u + '0');
-if (y == n)
-continue;
-_putchar(44);
-_putchar(32);
-_putchar(32);
-_putchar(32);
-}
+_putchar((prod % 10) + '0');
 }
 _putchar('\n');
+}
 }
 }
