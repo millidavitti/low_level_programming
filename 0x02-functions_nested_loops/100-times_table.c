@@ -12,10 +12,10 @@ void print_times_table(int n)
 if (n < 0 || n > 15)
 return;
 
- int x = 0;
- int y = 0;
+ int x, y;
 
- for (x = 0; x <= n; x++)
+for (x = 0; x <= n; x++)
+{
 for (y = 0; y <= n; y++)
 {
 int h, t, u, m;
@@ -26,26 +26,36 @@ u = m % 10;
 
 if (h > 0)
 {
-_putchar(h + '0');
-_putchar(t + '0');
-_putchar(u + '0');
-_putchar(44);
+putchar(h + '0');
+putchar(t + '0');
+putchar(u + '0');
+if (y == n)
+continue;
+putchar(44);
+putchar(46);
+  
 }
 else if (t > 0)
 {
-_putchar(32);
-_putchar(t + '0');
-_putchar(u + '0');
-_putchar(44);
-_putchar(32);
+putchar(t + '0');
+putchar(u + '0');
+if (y == n)
+continue;
+putchar(44);
+putchar(46);
+putchar(46);
 }
 else
 {
-_putchar(u + '0');
-_putchar(44);
-_putchar(32);
-_putchar(32);
+putchar(u + '0');
+if (y == n)
+continue;
+putchar(44);
+putchar(46);
+putchar(46);
+putchar(46);
 }
-_putchar('\n');
+}
+putchar('\n');
 }
 }
