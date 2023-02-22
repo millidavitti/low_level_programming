@@ -22,26 +22,26 @@ u = (i % 10);
 if (abs(h) > 0)
 {
 if (h < 0)
-putchar(45);
-putchar(abs(h) + '0');
-putchar(abs(t) + '0');
+_putchar(45);
+_putchar(abs(h) + '0');
+_putchar(abs(t) + '0');
 }
 else if (abs(t) > 0)
 {
 if (t < 0)
-putchar(45);
-putchar(abs(t) + '0');
+_putchar(45);
+_putchar(abs(t) + '0');
 }
 else if(abs(u) > 0){
 if (u < 0)
-putchar(45);
+_putchar(45);
 }
-putchar(abs(u) + '0');
+_putchar(abs(u) + '0');
 
 if (i == 98)
 continue;
-putchar(44);
-putchar(32);
+_putchar(44);
+_putchar(32);
 }
-putchar('\n');
+_putchar('\n');
 }
