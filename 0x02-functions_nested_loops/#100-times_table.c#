@@ -31,8 +31,7 @@ if (y == n)
 continue;
 _putchar(44);
 _putchar(32);
-}
-else if (t > 0)
+ (t > 0)
 {
 _putchar(t + '0');
 _putchar(u + '0');
