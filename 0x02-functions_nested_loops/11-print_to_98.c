@@ -13,7 +13,7 @@ followed by a new line
 void print_to_98(int n)
 {
 int i;
-for (i = n; i < 99; i++)
+for (i = n; n < 99 ? i < 99 : i > 97; n < 99 ? i++ : i--)
 {
 int t, u, h;
 h = (i - (i % 100)) / 100;
@@ -32,7 +32,8 @@ if (t < 0)
 _putchar(45);
 _putchar(abs(t) + '0');
 }
-else if(abs(u) > 0){
+else if (abs(u) > 0)
+{
 if (u < 0)
 _putchar(45);
 }
