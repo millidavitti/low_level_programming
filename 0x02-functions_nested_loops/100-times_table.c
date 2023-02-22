@@ -12,10 +12,10 @@ void print_times_table(int n)
 if (n < 0 || n > 15)
 return;
 
- int x;
- int y;
+ int x = 0;
+ int y = 0;
 
-for (x = 0; x <= n; x++)
+for (x <= n; x++)
 for (y = 0; y <= n; y++)
 {
 int h, t, u, m;
