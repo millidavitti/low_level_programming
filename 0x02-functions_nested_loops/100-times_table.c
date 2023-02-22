@@ -15,7 +15,7 @@ return;
  int x = 0;
  int y = 0;
 
-for (x <= n; x++)
+ for (x = 0; x <= n; x++)
 for (y = 0; y <= n; y++)
 {
 int h, t, u, m;
