@@ -9,15 +9,7 @@
 
 void print_number(int n)
 {
-int th, h, t, u, num;
-double p = 0;
-num = n;
-
-while (num1 != 0)
-{
-num1 /= 10;
-p++;
-}
+int th, h, t, u;
 
 th = (n / 1000);
 h = (n / 100) % 10;
