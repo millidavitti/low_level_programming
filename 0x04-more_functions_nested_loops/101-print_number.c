@@ -12,11 +12,13 @@ void print_number(int n)
 int num, i, p, abs;
 if (n > 0)
 abs = n;
-else
+else if (n < 0)
 {
 abs = -(n);
 _putchar('-');
 }
+else
+putchar(n + '0');
 p = 0;
 num = abs;
 while (num != 0)
