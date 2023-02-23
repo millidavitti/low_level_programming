@@ -1,5 +1,5 @@
 #include "main.h"
-#include <math.h>
+
 
 /**
  *print_number -  prints an integer.
@@ -19,9 +19,9 @@ num1 /= 10;
 p++;
 }
 
-th = (n / (int) pow(10, p - 1));
-h = (n / (int) pow(10, p - 2)) % 10;
-t = (n / (int) pow(10, p - 3)) % 10;
+th = (n / 1000);
+h = (n / 100) % 10;
+t = (n / 10) % 10;
 u = n % 10;
 
 if (th > 0)
