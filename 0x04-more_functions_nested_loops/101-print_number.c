@@ -18,7 +18,7 @@ abs = -(n);
 _putchar('-');
 }
 else
-putchar(n + '0');
+_putchar(n + '0');
 p = 0;
 num = abs;
 while (num != 0)
