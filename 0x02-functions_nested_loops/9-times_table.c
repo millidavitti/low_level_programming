@@ -20,7 +20,7 @@ u = m % 10;
 
 if (t > 0)
 _putchar(t + '0');
-else if (y > 0)
+else if (j > 0)
 _putchar(32);
 
 _putchar(u + '0');
