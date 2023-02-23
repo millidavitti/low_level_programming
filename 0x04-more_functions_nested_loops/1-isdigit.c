@@ -1,4 +1,4 @@
-#include <ctpye.h>
+#include <ctype.h>
 #include "main.h"
 
 /**
