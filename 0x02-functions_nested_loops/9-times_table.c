@@ -17,10 +17,12 @@ int m, t, u;
 m = i * j;
 t = (m - (m % 10)) / 10;
 u = m % 10;
+
 if (t > 0)
 _putchar(t + '0');
-else
+else if (y > 0)
 _putchar(32);
+
 _putchar(u + '0');
 if (j == 9)
 continue;
