@@ -9,18 +9,18 @@
 
 void print_number(int n)
 {
-int th, h, t, u;
+int num, p, i;
+p = 0;
+num = n;
+while (num1 != 0)
+{
+num1 /= 10;
+++p;
+printf("%d\n", p);
+}
 
-th = (n / 1000);
-h = (n / 100) % 10;
-t = (n / 10) % 10;
-u = n % 10;
-
-if (th > 0)
-_putchar(th + '0');
-if (h > 0 || (th > 0 && h == 0))
-_putchar(h + '0');
-if (t > 0 || (h >= 0 && t == 0))
-_putchar(t + '0');
-_putchar(u + '0');
+for (i = p; i >= 0; i--)
+{
+putchar(((n / (int) pow(10, i - 1)) % 10) + '0');
+}
 }
