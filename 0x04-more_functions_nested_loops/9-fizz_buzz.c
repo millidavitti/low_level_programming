@@ -35,7 +35,7 @@ if (t > 0)
 putchar(t + '0');
 putchar(u + '0');
 putchar(32);
-
 }
+putchar('\n');
 return (0);
 }
