@@ -18,17 +18,17 @@ t = (n - (n % 10)) / 10;
 u = n % 10;
 if (n % 3 == 0 && n % 5 == 0)
 {
-printf("FizzBuzz");
+printf("FizzBuzz ");
 continue;
 }
 else if (n % 3 == 0)
 {
-printf("Fizz");
+printf("Fizz ");
 continue;
 }
 else if (n % 5 == 0)
 {
-printf("Buzz");
+printf("Buzz ");
 continue;
 }
 if (t > 0)
