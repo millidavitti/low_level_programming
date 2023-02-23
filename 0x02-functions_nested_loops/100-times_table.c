@@ -22,25 +22,24 @@ int h, t, u, m;
 m = x * y;
 h  = (m - (m % 100)) / 100;
 t = ((m - (m % 10)) / 10) % 10;
-u = m % 10;
-
+u = m % 10; 
+  
 if (h > 0)
 _putchar(h + '0');
-else
-{
+else if (y > 0)
 _putchar(32);
-}
   
 if (t > 0 || (h > 0 && t == 0))
 _putchar(t + '0');
-else
+else if (y > 0)
 _putchar(32);
-  
+
 _putchar(u + '0');
 if (y == n)
 continue;
 _putchar(44);
 _putchar(32);
+
 }
 _putchar('\n');
 }
