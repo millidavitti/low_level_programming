@@ -15,7 +15,7 @@ for (y = 0; y < x + 1; y++)
 {
 
 if (y == x)
-putchar('\\');
+_putchar('\\');
 else
 _putchar(' ');
 }
