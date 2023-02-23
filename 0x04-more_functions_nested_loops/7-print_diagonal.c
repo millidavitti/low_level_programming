@@ -21,5 +21,5 @@ _putchar(' ');
 }
 _putchar('\n');
 }
-_puchar('\n');
+_putchar('\n');
 }
