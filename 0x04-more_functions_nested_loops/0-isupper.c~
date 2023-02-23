@@ -1,0 +1,11 @@
+#include "main.h"
+
+/**
+ *_isupper - checks for uppercase character.
+ *@c: int
+ *Return: int
+ */
+
+int _isupper(int c)
+{
+  
