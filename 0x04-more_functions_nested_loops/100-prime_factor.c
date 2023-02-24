@@ -21,6 +21,6 @@ if ((prime % fact) == 0)
 prime = prime / fact;
 }
 }
-printf("%ld", prime);
+printf("%ld\n", prime);
 return (0);
 }
