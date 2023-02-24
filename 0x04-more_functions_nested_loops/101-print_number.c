@@ -18,7 +18,10 @@ abs = -(n);
 _putchar('-');
 }
 else
+{
 _putchar(n + '0');
+return;
+}
 p = 0;
 num = abs;
 while (num != 0)
