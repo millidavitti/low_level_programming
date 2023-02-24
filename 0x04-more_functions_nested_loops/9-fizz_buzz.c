@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
@@ -13,28 +12,25 @@ int main(void)
 int n;
 for (n = 1; n <= 100; n++)
 {
-int t, u;
-t = (n - (n % 10)) / 10;
-u = n % 10;
+
 if (n % 3 == 0 && n % 5 == 0)
 {
-printf("FizzBuzz ");
-continue;
+printf("FizzBuzz");
 }
 else if (n % 3 == 0)
 {
-printf("Fizz ");
-continue;
+printf("Fizz");
 }
 else if (n % 5 == 0)
 {
-printf("Buzz ");
-continue;
+printf("Buzz");
 }
-if (t > 0)
-putchar(t + '0');
-putchar(u + '0');
-putchar(32);
+else
+{
+printf("%d", n);
+}
+if (n != 100)
+printf(" ");
 }
 putchar('\n');
 return (0);
