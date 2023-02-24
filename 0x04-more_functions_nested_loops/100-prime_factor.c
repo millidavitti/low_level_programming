@@ -6,35 +6,21 @@
  */
 int main(void)
 {
-long max_prime = -1;
-long n = 612852475143;
-int i;
-while (n % 2 == 0)
-{
-max_prime = 2;
-n /= 2;
-}
-while (n % 3 == 0)
-{
-max_prime = 3;
-n = n / 3;
-}
+long prime = 612852475143, fact = 0;
 
-for (i = 5; i <= sqrt(n); i += 6)
+while (fact < (prime / 2)
 {
-while (n % i == 0)
+if (!(prime % 2))
 {
-max_prime = i;
-n = n / i;
+prime = prime / 2;
+continue;
 }
-while (n % (i + 2) == 0)
+for (fact = 3; fact < (prime / 2); fact += 2)
 {
-max_prime = i + 2;
-n = n / (i + 2);
+if ((prime % fact) == 0)
+prime = prime / fact;
 }
 }
-if (n > 4)
-max_prime = n;
 printf("%ld", max_prime);
 return (0);
 }
