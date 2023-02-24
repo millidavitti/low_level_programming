@@ -8,7 +8,7 @@ int main(void)
 {
 long prime = 612852475143, fact = 0;
 
-while (fact < (prime / 2)
+while (fact < (prime / 2))
 {
 if (!(prime % 2))
 {
@@ -21,6 +21,6 @@ if ((prime % fact) == 0)
 prime = prime / fact;
 }
 }
-printf("%ld", max_prime);
+printf("%ld", prime);
 return (0);
 }
