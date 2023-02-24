@@ -38,6 +38,6 @@ for (j = 0; j < i; j++)
 {
 exp = exp * 10;
 }
-_putchar(((abs / exp) % 10) + '0');
+_putchar((((unsigned int)abs / exp) % 10) + '0');
 }
 }
