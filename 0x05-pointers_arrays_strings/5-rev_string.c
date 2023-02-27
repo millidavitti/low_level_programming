@@ -6,12 +6,13 @@
  *Return: void
  */
 
-void rev_string(char *s)
+void print_rev(char *s)
 {
 int i, len = strlen(s);
-for (i = len - 1; i >= 0; i--)
+for (int i = 0; i < len / 2; i++)
 {
-putchar(s[i]);
+char temp = s[i];
+s[i] = s[len - i - 1];
+s[len - i - 1] = temp;
 }
-putchar('\n');
 }
