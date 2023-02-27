@@ -7,11 +7,11 @@
 
 void print_rev(char *s)
 {
-char str[] = *s;
-int i, len = strlen(str);
-for (i = len; i >= len; i--)
+int i, len = strlen(s);
+for (i = len - 1; i >= 0; i--)
 {
-putchar(str[i]);
+char l = s[i];
+printf("%s", &l);
 }
 putchar('\n');
 }
