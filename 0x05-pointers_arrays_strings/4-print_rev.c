@@ -12,7 +12,7 @@ int i, len = strlen(s);
 for (i = len - 1; i >= 0; i--)
 {
 char l = s[i];
-printf("%s", &l);
+putchar(l);
 }
 putchar('\n');
 }
