@@ -18,12 +18,12 @@ srand(time(NULL));
 
 for (i = 0; i < 100; i++)
 {
-pass[i] = rand() % 33;
+pass[i] = rand() % 78;
 total += (pass[i] + 48);
 putchar(pass[i] + 48);
-if ((1981 - total) - 48 < 33)
+if ((3042 - total) - 48 < 78)
 {
-n = 1981 - total - 48;
+n = 3042 - total - 48;
 total += n;
 putchar(n + 48);
 break;
