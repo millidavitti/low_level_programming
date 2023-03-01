@@ -1,0 +1,26 @@
+#include <string.h>
+
+/**
+ *_strncat - concatenates two strings.
+ *@dest: new string
+ *@src: old string
+ *@n: number of bytes frm the old string
+ *Return: concatention
+ */
+
+char *_strncat(char *dest, char *src, int n)
+{
+char tmp[10], *str;
+int i, len = 0;
+
+while(src[len])
+len++;
+
+if (n > len) n = len;
+  
+for (i = 0; i < n; i++)
+tmp[i] = src[i];
+     
+str = strcat(dest, tmp);
+return (str);
+}
