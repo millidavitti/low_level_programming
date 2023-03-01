@@ -1,5 +1,5 @@
 
-/**
+0;10;1c/**
  *_strcmp - compares two strings.
  *@s1: string 1
  *@s2: string 2
@@ -16,5 +16,5 @@ break;
 s1++;
 s2++;
 }
-return (*s2 - *s2);
+return (*s1 - *s2);
 }
