@@ -1,4 +1,3 @@
-#include <string.h>
 
 /**
  *_strcmp - compares two strings.
@@ -9,18 +8,13 @@
 
 int _strcmp(char *s1, char *s2)
 {
-int i, s1len = strlen(s1), s2len = strlen(s2);
-for (i = 0; s1[i]; i++)
+while (*s1)
 {
-if (s1[i] != s2[i])
-{
-if (s1len > s2len)
-return (15);
-else if (s1len < s2len)
-return (-15);
-else if (s1len == s2len)
-return (-15);
+if (*s1 != *s2)
+break;
+
+s1++;
+s2++;
 }
-}
-return (0);
+return (*s2 - *s2);
 }
