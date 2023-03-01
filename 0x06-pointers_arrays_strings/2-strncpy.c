@@ -4,22 +4,20 @@
  *_strncpy - copies a string.
  *@dest: new string
  *@src: source string
- *@n: numbee of bytes
+ *@n: number of bytes
  *Return: new string
  */
 
 char *_strncpy(char *dest, char *src, int n)
 {
-char tmp[100], *str;
-int i, len = 0;
+int i, srclen = strlen(src);
 
-while(src[len])
-len++;
-if (n > len) n = len;
-  
-for (i = 0; i < n; i++)
-tmp[i] = src[i];
-     
-str = strcat(dest, tmp);
-return (str);
+for (i = srclen; i < n; i++)
+dest[i] = '\0';
+for (i = 0; i < n && src[i]; i++)
+{
+dest[i] = src[i];
+}
+
+return (dest);
 }
