@@ -10,17 +10,13 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-char tmp[10], *str;
-int i, len = 0;
+int i, destlen = strlen(dest);
 
-while(src[len])
-len++;
+for (i = 0; i < n && src[i]; i++)
+{
 
-if (n > len) n = len;
-  
-for (i = 0; i < n; i++)
-tmp[i] = src[i];
-     
-str = strcat(dest, tmp);
-return (str);
+dest[destlen] = src[i];
+destlen++;
+}
+return (dest);
 }

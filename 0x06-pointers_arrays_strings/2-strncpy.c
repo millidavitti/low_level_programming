@@ -1,0 +1,25 @@
+#include <string.h>
+
+/**
+ *_strncpy - copies a string.
+ *@dest: new string
+ *@src: source string
+ *@n: numbee of bytes
+ *Return: new string
+ */
+
+char *_strncpy(char *dest, char *src, int n)
+{
+char tmp[100], *str;
+int i, len = 0;
+
+while(src[len])
+len++;
+if (n > len) n = len;
+  
+for (i = 0; i < n; i++)
+tmp[i] = src[i];
+     
+str = strcat(dest, tmp);
+return (str);
+}
