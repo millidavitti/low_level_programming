@@ -9,6 +9,6 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-strpbrk(s, accept);
-return (s);
+char *ptr = strpbrk(s, accept);
+return (ptr);
 }
