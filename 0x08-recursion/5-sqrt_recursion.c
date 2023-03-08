@@ -20,7 +20,7 @@ return (sqrt_helper(num, new_guess));
 }
 
 /**
- *sqrt_helper - return the natural root o number
+ * _sqrt_recursion - return the natural root o number
  *@n: number
  *Return: int root or -1
  */
