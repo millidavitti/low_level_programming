@@ -14,8 +14,7 @@ if (*s)
 _putchar(*s);
 print(s - 1);
 }
-else
-_putchar('\n');
+
 }
 /**
  *_print_rev_recursion - prints a string in reverse.
