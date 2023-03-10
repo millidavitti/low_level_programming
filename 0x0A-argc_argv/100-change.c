@@ -16,6 +16,11 @@ printf("Error\n");
 return (1);
 }
 amt = atoi(argv[1]);
+if (amt < 0)
+{
+printf("%d\n", 0);
+return (0);
+}
 while (amt)
 {
 if (amt < change[i])
