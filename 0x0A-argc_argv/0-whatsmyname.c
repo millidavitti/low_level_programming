@@ -7,6 +7,6 @@
 
 int main(int argc, char **argv)
 {
-printf("%s", *(*argv));
+printf("%s\n", *(*argv));
 return (0);
 }
