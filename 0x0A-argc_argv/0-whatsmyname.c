@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
  *main - prints program name
  *@argc: argument count
@@ -5,8 +6,9 @@
  *Return: int
  */
 
-int main(int argc, char *arg[])
+int main(int argc, char *argv[])
 {
-printf("%s\n", *arg[0]);
+(void)argc;
+printf("%s\n", argv[0]);
 return (0);
 }
