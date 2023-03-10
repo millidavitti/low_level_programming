@@ -1,0 +1,13 @@
+
+/**
+ *_isupper - uppercase
+ *@s: char*
+ *@b: char
+ *@n: unsigned int
+ *Return: char*
+ *Return: int
+ */
+
+char *_memset(char *s, char b, unsigned int n)
+{
+}
