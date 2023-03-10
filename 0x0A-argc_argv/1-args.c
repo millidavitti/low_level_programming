@@ -8,7 +8,10 @@
 
 int main(int argc, char *argv[])
 {
-(void)argv;
-printf("%d\n", argc);
+(void)argc;
+int i = 0;
+while(argv[i])
+i++;
+printf("%d\n", i);
 return (0);
 }
