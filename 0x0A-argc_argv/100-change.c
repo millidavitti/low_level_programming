@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 int change[] = {25, 10, 5, 2, 1}, i = 0, min = 0, amt;
 if (argc != 2)
 {
-printf("Error");
+printf("Error\n");
 return (1);
 }
 amt = atoi(argv[1]);
