@@ -15,6 +15,8 @@ unsigned int i;
 if (!size)
 return (NULL);
 arr = (char *)malloc(sizeof(char) * size);
+if (!array)
+return (NULL);
 for (i = 0; i < size; i++)
 *(arr + i) = c;
 return (arr);
