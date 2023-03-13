@@ -1,5 +1,5 @@
 #include <string.h>
-#include <stdder.h>
+#include <stddef.h>
 /**
  *_strdup - returns a pointer to a newly allocated \
 space in memory, which contains a copy of the \
