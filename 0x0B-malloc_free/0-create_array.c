@@ -9,7 +9,7 @@ initializes it with a specific char.
 
 char *create_array(unsigned int size, char c)
 {
-char *arr = (char *)malloc(sizeof(char) * size);
+char *arr = malloc(sizeof(char) * size) ? (char *)malloc(sizeof(char) * size) : NULL;
 unsigned int i;
 if (!size)
 return (NULL);
