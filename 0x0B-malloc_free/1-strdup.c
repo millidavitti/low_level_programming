@@ -15,8 +15,9 @@ int len = strlen(str), i;
 char *cpy;
 if (str == NULL)
 return (NULL);
-cpy = (char *)malloc(sizeof(char) * len);
-
+cpy = (char *)malloc(sizeof(char) * len + 1);
+if (!cpy)
+return (NULL);
 for (i = 0; i < len; i++)
 *(cpy + i) = str[i];
 
