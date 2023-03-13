@@ -11,10 +11,11 @@ string given as a parameter.
 
 char *_strdup(char *str)
 {
-int len = strlen(str), i;
+int len, i;
 char *cpy;
 if (str == NULL)
 return (NULL);
+len = strlen(str);
 cpy = (char *)malloc(sizeof(char) * len + 1);
 if (!cpy)
 return (NULL);
