@@ -14,13 +14,16 @@ int **alloc_grid(int width, int height)
 int i, j;
 int **xmalloc, *ymalloc;
 
-if (!width || !height || width < 0 || height < 0)
+if (!width || !height)
 return (NULL);
 
 xmalloc = (int **)malloc(sizeof(int *) * height);
 
 if (!xmalloc)
 {
+for (i = 0; i < height; i++)
+free(xmalloc[i]);
+free(xmalloc);
 return (NULL);
 }
 for (i = 0; i < height; i++)
