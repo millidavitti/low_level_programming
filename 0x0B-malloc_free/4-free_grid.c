@@ -16,6 +16,6 @@ for (i = 0; i < height; i++)
 {
 free(grid[i]);
 }
-free(grid);
+
 free(grid);
 }
