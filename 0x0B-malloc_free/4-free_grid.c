@@ -18,4 +18,5 @@ int *curr = grid[i];
 
 free(curr);
 }
+free(grid);
 }
