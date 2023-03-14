@@ -31,6 +31,6 @@ str[j + mark] = av[i][j];
 mark = mark + j;
 str[mark] = '\n';
 }
-str[mark];
+str[mark] = '\0';
 return (str);
 }
