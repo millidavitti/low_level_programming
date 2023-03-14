@@ -23,7 +23,6 @@ if (!xmalloc)
 {
 for (i = 0; i < height; i++)
 free(xmalloc[i]);    
-free(xmalloc);
 return (NULL);
 }
 for (i = 0; i < height; i++)
