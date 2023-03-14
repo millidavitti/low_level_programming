@@ -17,7 +17,7 @@ int **xmalloc, *ymalloc;
 if (!width || !height || width < 0 || height < 0)
 return (NULL);
 
-xmalloc = (int **)malloc(sizeof(int) * height);
+xmalloc = (int **)malloc(sizeof(int*) * height);
 
 if (!xmalloc)
 return (NULL);
@@ -28,17 +28,6 @@ ymalloc = (int *)malloc(sizeof(int) * width);
 *(xmalloc + i) = ymalloc;
 
 for (j = 0; j <= width; j++)
-{
-*(ymalloc + j) = 0;
-}
-}
-
-for (i = 0; i < 1; i++)
-{
-ymalloc = (int *)malloc(sizeof(int) * width);
-*(xmalloc + i) = ymalloc;
-
-for (j = 0; j < width; j++)
 {
 *(ymalloc + j) = 0;
 }
