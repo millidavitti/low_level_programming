@@ -12,6 +12,8 @@ char *argstostr(int ac, char **av)
 {
 int i, j, len = 0, mark = 0;
 char *str;
+if (ac == 0 || av == NULL)
+return (NULL);
 for (i = 0; i < ac; i++)
 {
 len += (int)strlen(av[i]);
