@@ -21,8 +21,6 @@ xmalloc = (int **)malloc(sizeof(int *) * height);
 
 if (!xmalloc)
 {
-for (i = 0; i < height; i++)
-free(xmalloc[i]);
 free(xmalloc);
 return (NULL);
 }
