@@ -17,11 +17,13 @@ int **xmalloc, *ymalloc;
 if (!width || !height || width < 0 || height < 0)
 return (NULL);
 
-xmalloc = (int **)malloc(sizeof(int*) * height);
+xmalloc = (int **)malloc(sizeof(int *) * height);
 
 if (!xmalloc)
+{
+free(xmalloc);
 return (NULL);
-
+}
 for (i = 0; i < height; i++)
 {
 ymalloc = (int *)malloc(sizeof(int) * width);
