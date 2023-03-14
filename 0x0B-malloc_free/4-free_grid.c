@@ -14,9 +14,8 @@ void free_grid(int **grid, int height)
 int i;
 for (i = 0; i < height; i++)
 {
-int *curr = grid[i];
-
-free(curr);
+free(grid[i]);
 }
+free(grid);
 free(grid);
 }
