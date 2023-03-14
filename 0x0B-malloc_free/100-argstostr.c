@@ -19,7 +19,7 @@ for (i = 0; i < ac; i++)
 len += (int)strlen(av[i]);
 }
 
-str = (char *)malloc(sizeof(char) * (len + 1));
+str = (char *)malloc(sizeof(char *) * (len + 1));
 
 for (i = 0; i < ac; i++)
 {
