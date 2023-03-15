@@ -20,7 +20,8 @@ len += (int)strlen(av[i]);
 }
 
 str = (char *)malloc(sizeof(char *) * (len + 1));
-
+if (!str)
+return (NULL);
 for (i = 0; i < ac; i++)
 {
 ++mark;
