@@ -14,9 +14,12 @@ int i, j, len = 0, mark = 0;
 char *str;
 if (ac == 0 || av == NULL)
 return (NULL);
-for (i = 0; i < ac; i++)
+
+for (i = 0, len = 0; i < ac; i++)
 {
-len += (int)strlen(av[i]);
+for (j = 0; av[i][j] != '\0'; j++)
+len++;
+len++;
 }
 
 str = (char *)malloc(sizeof(char *) * (len + 1));
