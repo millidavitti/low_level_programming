@@ -16,8 +16,7 @@ arr = malloc(size * nmemb);
 if (!arr)
 return (NULL);
 
-for (i = 0; i < nmemb; i++)
-arr[i] = 0;
+memset(arr, 0, nmemb * size);
 
 return (arr);
 }
