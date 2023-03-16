@@ -28,7 +28,7 @@ n = len2;
 
 str = malloc(sizeof(char) * (n + len + 1));
 
-if (!str)
+if (str == NULL)
 return (NULL);
 
 /*copying s1*/
