@@ -9,6 +9,6 @@ void *malloc_checked(unsigned int b)
 {
 int *num = malloc(sizeof(*num) * b);
 if (!num)
-return (NULL);
+exit(98);
 return (num);
 }
