@@ -1,10 +1,6 @@
 # Debugging in Software Development
 
 
-<p align="center">  
-<img src ="./imgs/debugging.png" width="500">
-</p>
-
 > You can't keep doing the same thing and expect different results
 
 Debugging is a crucial part of the software development process. It is the process of identifying and fixing errors, or bugs, in software applications. The term "debugging" comes from the story of Grace Hopper, a computer scientist who removed a moth from a computer in 1947, coining the term "debugging". She is credited with popularizing the term when she actually found a moth in the computer.
