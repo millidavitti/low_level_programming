@@ -10,7 +10,7 @@
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-unsigned int *new_block, *merge;
+unsigned int *new_block;
 if (new_size > old_size)
 new_block = malloc(old_size + new_size);
 else if (ptr == NULL)
@@ -26,8 +26,6 @@ return (NULL);
 if (!new_block)
 return (NULL);
 
-merge = ptr + (old_size / sizeof(int));
-*merge = *new_block;
-
-return (ptr);
+free(ptr);
+return (new_block);
 }
