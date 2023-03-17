@@ -16,22 +16,22 @@ unsigned int i;
 if (new_size == old_size)
 return (ptr);
 
-if (new_size == 0 && ptr != NULL)
+if (!new_size && ptr)
 {
 free(ptr);
 return (NULL);
 }
 
-if (ptr == NULL)
+if (!ptr)
 {
 new_block = malloc(new_size);
-if (new_block == NULL)
+if (!new_block)
 return (NULL);
 return (new_block);
 }
 
 new_block = malloc(new_size);
-if (new_block == NULL)
+if (!new_block)
 return (NULL);
 
 for (i = 0; i < old_size; i++)
