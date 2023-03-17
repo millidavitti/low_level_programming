@@ -14,7 +14,12 @@ unsigned int *new_block;
 if (new_size > old_size)
 new_block = malloc(old_size + new_size);
 else if (ptr == NULL)
-return (malloc(new_size));
+{
+new_block = malloc(new_size);
+if (!new_block)
+return (NULL);
+return (new_block);
+}
 else if (new_size == old_size)
 return (ptr);
 else if (!new_size && ptr)
