@@ -28,5 +28,6 @@ if (*(ops[i].op) == *s)
 return (ops[i].f);
 i++;
 }
-return (NULL);
+printf("Error\n");
+exit(99);
 }
