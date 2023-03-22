@@ -22,7 +22,7 @@ char *start = (char *) main;
 char *end = start + num_bytes;
 
 while (start < end) {
-printf("%02x ", *start & 0xff);
+printf("%02hhx ", *start & 0xff);
 start++;
 }
 
