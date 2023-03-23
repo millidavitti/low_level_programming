@@ -1,67 +1,76 @@
+#include "variadic_functions.h"
 #include <stdio.h>
-#include <stdarg.h>
+
 /**
- *loop -  loops.
- *@format: types of arguments passed to the function
- *@c: char
- *@s: char *
- *@f: float
- *@i: iteration count
- *@args: va_list
- *Return: void
+ * print_char - prints a character
+ * @ap: va_list containing the character to print
  */
-void loop(const char *format, char c, char *s, float f, int i, va_list args)
+void print_char(va_list ap)
 {
+printf("%c", va_arg(ap, int));
+}
+
+/**
+ * print_int - prints an integer
+ * @ap: va_list containing the integer to print
+ */
+void print_int(va_list ap)
+{
+printf("%d", va_arg(ap, int));
+}
+
+/**
+ * print_float - prints a float
+ * @ap: va_list containing the float to print
+ */
+void print_float(va_list ap)
+{
+printf("%f", va_arg(ap, double));
+}
+
+/**
+ * print_string - prints a string
+ * @ap: va_list containing the string to print
+ */
+void print_string(va_list ap)
+{
+char *s = va_arg(ap, char*);
+
+printf("%s", s == NULL ? "(nil)" : s);
+}
+
+/**
+ * print_all - prints anything
+ * @format: list of types of arguments passed to the function
+ */
+void print_all(const char * const format, ...)
+{
+va_list ap;
+int i = 0, j;
+char *sep = "";
+
+print_t print[] = {
+{"c", print_char},
+{"i", print_int},
+{"f", print_float},
+{"s", print_string},
+{NULL, NULL}
+};
+
+va_start(ap, format);
 while (format && format[i])
 {
-if (format[i] == 'c')
+j = 0;
+while (j < 4 && format[i] != print[j].param[0])
+++j;
+if (j < 4)
 {
-c = va_arg(args, int);
-printf("%c", c);
+printf("%s", sep);
+print[j].f(ap);
+sep = ", ";
 }
-else if (format[i] == 'i')
-{
-int num = va_arg(args, int);
-printf("%d", num);
+++i;
 }
-else if (format[i] == 'f')
-{
-f = va_arg(args, double);
-printf("%f", f);
-}
-else if (format[i] == 's')
-{
-s = va_arg(args, char*);
-if (s == NULL)
-printf("(nil)");
-else
-printf("%s", s);
-}
-i++;
-
-if (format[i] && (format[i] == 'c' || format[i] == 'i' ||
-format[i] == 'f' || format[i] == 's'))
-{
-printf(", ");
-}
-}
-}
-
-/**
- *print_all -  prints anything.
- *@format: types of arguments passed to the function
- *Return: void
- */
-void print_all(const char *format, ...)
-{
-va_list args;
-int i = 0;
-char c = '\0';
-char *s = NULL;
-float f = 0.0f;
-va_start(args, format);
-loop(format, c, s, f, i, args);
-
 printf("\n");
-va_end(args);
+va_end(ap);
 }
