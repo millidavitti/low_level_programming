@@ -1,31 +1,45 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- *main - entry point
- *@argc: argument length
- *@argv: array of argumnents
- *Return: int
+ * error - prints error message and exits
+ *
+ * @err: error code
  */
-int main(int argc, char *argv[]) {
-if (argc != 2) {
+void error(int err)
+{
 printf("Error\n");
-exit(1);
+exit(err);
 }
 
-int num_bytes = atoi(argv[1]);
-if (num_bytes < 0) {
-printf("Error\n");
-exit(2);
+/**
+ * main - prints the opcodes of its own main function.
+ *
+ * @argc: number of arguments
+ * @argv: array of arguments
+ *
+ * Return: 0
+ */
+int main(int argc, char *argv[])
+{
+int i, n;
+
+/* check for correct number of arguments */
+if (argc != 2)
+error(1);
+
+/* get number of bytes to print */
+n = atoi(argv[1]);
+if (n < 0)
+error(2);
+
+/* print opcodes */
+for (i = 0; i < n; i++)
+{
+printf("%02hhx", ((char *)main)[i]);
+if (i < n - 1)
+printf(" ");
 }
-
-char *start = (char *) main;
-char *end = start + num_bytes;
-
-while (start < end) {
-printf("%02hhx ", *start & 0xff);
-start++;
-}
-
 printf("\n");
-return 0;
+return (0);
 }
