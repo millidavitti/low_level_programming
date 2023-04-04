@@ -5,9 +5,9 @@
  * @head: head of the list
  * Return: void
  */
-void free_list(list_t **head)
+void free_listint2(listint_t **head)
 {
-list_t *temp;
+listint_t *temp;
 
 if (head == NULL)
 return;
