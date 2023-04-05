@@ -1,46 +1,24 @@
 #include "lists.h"
+#include <stdlib.h>
 #include <string.h>
 
 /**
- * _strlen - returns the length of a string
- * @s: string to be measured
- *
- * Return: the length of the string
- */
-int _strlen(const char *s)
-{
-int i = 0;
-
-while (s[i])
-i++;
-return (i);
-}
-
-/**
- * add_node_end - adds a new node at the end of a list_t list
- * @head: pointer to the head of the list
- * @str: string to be duplicated
- *
- * Return: the address of the new element, or NULL if it failed
- */
+*add_node_end - adds a new node at the end of a list_t list
+*@head: head of the list
+*@str: string
+*Return: new element or NULL
+*/
 list_t *add_node_end(list_t **head, const char *str)
 {
-list_t *new, *last;
+list_t *new_node;
 
-new = malloc(sizeof(list_t));
-if (new == NULL)
+new_node = malloc(sizeof(list_t));
+if (new_node == NULL)
 return (NULL);
-new->str = strdup(str);
-new->len = _strlen(str);
-new->next = NULL;
-if (*head == NULL)
-*head = new;
-else
-{
-last = *head;
-while (last->next)
-last = last->next;
-last->next = new;
-}
-return (new);
+new_node->str = strdup(str);
+new_node->len = strlen(str);
+new_node->next = *head;
+*head = new_node;
+
+return (new_node);
 }
