@@ -18,25 +18,25 @@ return (len);
 
 /**
  * add_list_node - adds a new node at the beginning of a list
- * @list: head of the list
- * @data: data
+ * @head: head of the list
+ * @str: data
  * Return: new element or NULL
  */
-list_t *add_list_node(list_t **list, const char *data)
+list_t *add_list_node(list_t **head, const char *str)
 {
 list_t *new_node = malloc(sizeof(list_t));
 if (new_node == NULL)
 return (NULL);
 
-new_node->data = strdup(data);
-if (new_node->data == NULL)
+new_node->str = strdup(str);
+if (new_node->str == NULL)
 {
 free(new_node);
 return (NULL);
 }
 
-new_node->len = str_len(data);
-new_node->next = *list;
-*list = new_node;
+new_node->len = str_len(str);
+new_node->next = *head;
+*head = new_node;
 return (new_node);
 }
