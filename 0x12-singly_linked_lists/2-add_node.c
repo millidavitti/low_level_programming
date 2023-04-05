@@ -17,12 +17,12 @@ return (len);
 }
 
 /**
- * add_list_node - adds a new node at the beginning of a list
+ * add_node - adds a new node at the beginning of a list
  * @head: head of the list
  * @str: data
  * Return: new element or NULL
  */
-list_t *add_list_node(list_t **head, const char *str)
+list_t *add_node(list_t **head, const char *str)
 {
 list_t *new_node = malloc(sizeof(list_t));
 if (new_node == NULL)
