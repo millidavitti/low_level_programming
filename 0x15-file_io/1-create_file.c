@@ -20,6 +20,9 @@ file = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 if (file < 0)
 return (-1);
 
+if (!text_content)
+text_content = "";
+
 bytes_written = write(file, text_content, sizeof(text_content) - 2);
 
 if (bytes_written < 0 || file < 0)
