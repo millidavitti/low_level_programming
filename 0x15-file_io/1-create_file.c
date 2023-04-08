@@ -22,7 +22,7 @@ return (-1);
 
 bytes_written = write(file, text_content, sizeof(text_content) - 2);
 
-if (bytes_written < 0 || bytes_read < 0)
+if (bytes_written < 0 || file < 0)
 return (-1);
 
 close(file);
