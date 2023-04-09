@@ -2,10 +2,19 @@
 #include <string.h>
 #include <math.h>
 
-int power(int base, int exponent) {
+/**
+ *power - exponetiation
+ *@base: the base number
+ *@exponent: the exponent
+ *Return: int
+ */
+
+int power(int base, int exponent)
+{
 int result = 1.0;
 int i;
-for (i = 0; i < exponent; i++) {
+for (i = 0; i < exponent; i++)
+{
 result *= base;
 }
 return (result);
@@ -23,9 +32,10 @@ return (c - '0');
  *binary_to_uint - converts a binary number to an unsigned int
  *@b: a string of 0 and 1 chars
  *Return: u..d int or null
- */ 
+ */
 
-unsigned int binary_to_uint(const char *b) {
+unsigned int binary_to_uint(const char *b)
+{
 int *bytes, i, j, sum, start, len;
 char *new_str;
 
@@ -35,20 +45,21 @@ len = strlen(b);
 
 start = 0;
 for (i = 0; i < len; i++)
-if (charToInt(b[i]) == 1) {
+if (charToInt(b[i]) == 1)
+{
 start = i;
 break;
 }
 
-new_str = malloc(sizeof new_str * (len - start));
+new_str = malloc(sizeof(new_str) * (len - start));
 if (!new_str)
 return (-1);
 
-for (i = start, j=0; b[i]; i++,j++)
+for (i = start, j = 0; b[i]; i++, j++)
 new_str[j] = b[i];
 new_str[j] = '\0';
 
-bytes = malloc(sizeof bytes * strlen(new_str));
+bytes = malloc(sizeof(bytes) * strlen(new_str));
 if (!bytes)
 return (-1);
 
@@ -56,10 +67,12 @@ for (i = strlen(new_str) - 1, j = 0; i >= 0; i--, j++)
 bytes[j] = power(2, i);
 sum = 0;
 
-for (i = 0; bytes[i]; i++) {
+for (i = 0; bytes[i]; i++)
+{
 if (charToInt(new_str[i]) == 1)
 sum += bytes[i];
-else if (charToInt(new_str[i]) != 0) {
+else if (charToInt(new_str[i]) != 0)
+{
 sum = 0;
 break;
 }
