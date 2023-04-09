@@ -1,6 +1,15 @@
 #include "main.h"
 #include <string.h>
 #include <math.h>
+
+int power(int base, int exponent) {
+int result = 1.0;
+int i;
+for (i = 0; i < exponent; i++) {
+result *= base;
+}
+return (result);
+}
 /**
  *charToInt - char to int
  *@c: character
@@ -44,7 +53,7 @@ if (!bytes)
 return (-1);
 
 for (i = strlen(new_str) - 1, j = 0; i >= 0; i--, j++)
-bytes[j] = (int)pow(2, i);
+bytes[j] = power(2, i);
 sum = 0;
 
 for (i = 0; bytes[i]; i++) {
