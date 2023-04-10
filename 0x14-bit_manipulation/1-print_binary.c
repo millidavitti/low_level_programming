@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 
@@ -19,6 +18,6 @@ exp++;
 for (i = sizeof(n) * exp - (sizeof(n) * exp - exp); i >= 0; i--)
 {
 bit = (n >> i) & 1;
-putchar(bit ? '1' : '0');
+_putchar(bit ? '1' : '0');
 }
 }
