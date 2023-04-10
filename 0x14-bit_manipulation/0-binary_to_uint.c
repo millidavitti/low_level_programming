@@ -3,6 +3,20 @@
 #include <math.h>
 
 /**
+ *cpy_str - copies string
+ *@src: the source string
+ *@dest: the new string
+ *@start: where to start copying from
+ *Return: void
+ */
+void cpy_str(const char *src, char *dest, int start)
+{
+int *bytes, i, j;
+for (i = start, j = 0; src[i]; i++, j++)
+dest[j] = src[i];
+dest[j] = '\0';
+}
+/**
  *power - exponetiation
  *@base: the base number
  *@exponent: the exponent
@@ -55,9 +69,7 @@ new_str = malloc(sizeof(new_str) * (len - start));
 if (!new_str)
 return (-1);
 
-for (i = start, j = 0; b[i]; i++, j++)
-new_str[j] = b[i];
-new_str[j] = '\0';
+cpy_str(b, new_str, start);
 
 bytes = malloc(sizeof(bytes) * strlen(new_str));
 if (!bytes)
