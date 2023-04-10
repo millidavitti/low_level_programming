@@ -3,62 +3,19 @@
 #include <string.h>
 
 /**
- *power - exponetiation
- *@base: the base number
- *@exponent: the exponent
- *Return: int
- */
-
-int power(int base, int exponent)
-{
-int result = 1.0;
-int i;
-for (i = 0; i < exponent; i++)
-{
-result *= base;
-}
-return (result);
-}
-
-/**
  *print_binary - prints the binary representation of a number.
  *@n: u..d int
  *Return: void
  */
-void print_binary(unsigned long int n)
-{
-int exp = 0, i, num;
-char *binary;
-
+void print_binary(unsigned long int n) {
+int i, bit, exp = 0, num;
 num = (n / 2);
-while (num)
-{
+while (num) {
 num = (num / 2);
 exp++;
 }
-
-binary = malloc(sizeof(binary) * (exp + 1));
-
-if (!binary)
-return;
-
-for (i = 0; i < exp + 1; i++)
-binary[i] = '0';
-binary[i] = '\0';
-
-num = n, i = 0;
-while (num)
-{
-if (num < power(2, exp))
-{
-exp--;
-continue;
+for (i = sizeof(n) * exp - (sizeof(n) * exp - exp); i >= 0; i--) {
+bit = (n >> i) & 1;
+putchar(bit ? '1' : '0');
 }
-
-num = num - power(2, exp);
-binary[strlen(binary) - exp - 1] = '1';
-i++;
-}
-
-printf("%s", binary);
 }
