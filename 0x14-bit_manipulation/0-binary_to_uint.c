@@ -11,7 +11,7 @@
  */
 void cpy_str(const char *src, char *dest, int start)
 {
-int *bytes, i, j;
+int i, j;
 for (i = start, j = 0; src[i]; i++, j++)
 dest[j] = src[i];
 dest[j] = '\0';
