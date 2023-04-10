@@ -19,6 +19,6 @@ exp++;
 for (i = sizeof(n) * exp - (sizeof(n) * exp - exp); i >= 0; i--)
 {
 bit = (n >> i) & 1;
-_putchar(bit ? '1' : '0');
+putchar(bit ? '1' : '0');
 }
 }
