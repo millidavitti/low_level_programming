@@ -15,7 +15,7 @@ unsigned int flips = 0;
 while (exc_or)
 {
 flips++;
-exc_or =exc_or & (exc_or - 1);
+exc_or = exc_or & (exc_or - 1);
 }
 return (flips);
 }
