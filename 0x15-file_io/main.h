@@ -8,6 +8,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <elf.h>
 
 typedef struct {
     unsigned char magic[4];
